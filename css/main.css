@@ -109,22 +109,86 @@ body {
 h1, p {
   font-family: Cheboygan;
 }
+.wrapper {
+  padding: 0 10%;
+}
+.about-wrapper {
+  margin: 50px 0;
+}
+.about-link {
+  margin-right: 7px;
+}
+.logo {
+  margin-left: 5%;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  font-size: 4em;
+}
+
+header {
+  margin-bottom: 50px;
+}
+.about-email {
+  margin-left: 5%;
+  margin-bottom: 50px;
+}
+.about-wrapper > section {
+  padding-left: 0px;
+}
+.about-wrapper > section > a {
+  font-size: 1.2em;
+}
+.dingbats {
+  margin-bottom: 50px;
+}
+.about-email > section {
+  padding-left: 0px;
+}
+.about-email > section > p {
+  margin-bottom: 0rem;
+  font-size: 1.2em;
+  color: rgb(221, 98, 28);
+}
+.black-q {
+  color: black;
+}
+
 
 p.episode-info {
   font-family: BookmanRegular;
+  font-size: 1.2em;
+}
+.episode {
+  margin-bottom: 15px;
 }
 
 .intro-text > p {
-  margin-bottom: 0rem;
+  font-size: 1.2em;
+  margin-bottom: 0.2rem;
 }
 
+.head-img {
+  position: relative;
+  bottom: 50px;
+}
+
+.episodes {
+  margin-bottom: 25px;
+}
+.episode-title {
+  font-size: 1.3em;
+  letter-spacing: 5px;
+}
 .more,
-h3,
+h2,
 a {
   font-family: Cheboygan;
   color: rgb(221, 98, 28);
 }
 
+h2 {
+  font-size: 3em;
+}
 .episode-title {
   font-weight: bold;
   text-decoration: underline;
@@ -135,6 +199,54 @@ a {
   max-height: 30px;
   margin-left: 4px;
   padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    padding: 0 0%;
+  }
+
+  .logo {
+    margin-left: 0%;
+    border-bottom: 1px solid black;
+    font-size: 2.8em;
+  }
+  .intro-text > p {
+    font-size: 0.65em;
+    margin-bottom: 0.2rem;
+  }
+  .about-wrapper > section > a {
+    font-size: 0.65em;
+  }
+  .head-img {
+    position: relative;
+    bottom: 20px;
+    max-height: 150px;
+  }
+  .intro-image {
+    padding:0px;
+  }
+  .three-messages {
+    max-height: 20px;
+  }
+
+  .hand-img {
+    max-height: 15px;
+    margin-left: 1px;
+    padding-bottom: 0px;
+  }
+  .episodes {
+    font-size: 2.5em;
+  }
+  .episode-title {
+    font-size: 1em;
+    letter-spacing: 3px;
+  }
+  p.episode-info {
+    font-family: BookmanRegular;
+    font-size: 1em;
+  }
+  /* Style adjustments for viewports that meet the condition */
 }
 
 /* ==========================================================================
