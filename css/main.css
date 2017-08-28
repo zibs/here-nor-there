@@ -7,11 +7,11 @@
  */
 @font-face {
   font-family: 'Cheboygan';
-  src: url('fonts/Cheyboga.ttf') format('truetype');
+  src: url('../fonts/Cheyboga.ttf') format('truetype');
 }
 @font-face {
   font-family: 'BookmanRegular';
-  src: url('fonts/BookmanRegular.ttf') format('truetype');
+  src: url('../fonts/BookmanRegular.ttf') format('truetype');
 }
 
 /* ==========================================================================
@@ -121,7 +121,7 @@ p {
   font-family: Cheboygan;
 }
 .wrapper {
-  padding: 0 10%;
+  padding: 0% 10%;
 }
 .about-wrapper {
   margin: 50px 0;
@@ -192,7 +192,7 @@ position: relative;
 bottom: 5px;
 }
 p.episode-info {
-  font-family: BookmanRegular;
+  font-family: monospace;
   font-size: 1.2em;
   display: inline;
 }
@@ -239,7 +239,7 @@ p.episode-info {
 .about-section > p {
   font-size: 1.2em;
   letter-spacing: 1.5px;
-  font-family: "BookmanRegular";
+  font-family:courier:;
   margin-bottom: 35px;
 }
 .about-img {
@@ -297,8 +297,17 @@ p.episode-info {
     letter-spacing: 3px;
   }
   p.episode-info {
-    font-family: BookmanRegular;
     font-size: 1em;
+  }
+  .about-section > p {
+    font-size: 1em;
+    /*letter-spacing: 1px;*/
+    font-family: sans-serif;
+    margin-bottom: 35px;
+  }
+  .about-img {
+    max-height: 550px;
+    margin-bottom: 10px;
   }
   /* Style adjustments for viewports that meet the condition */
 }
