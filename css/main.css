@@ -1,18 +1,22 @@
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 @font-face {
   font-family: 'Cheboygan';
   src: url('../fonts/Cheboyga.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'BookmanRegular';
   src: url('../fonts/BookmanRegular.ttf') format('truetype');
 }
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -23,6 +27,7 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -42,6 +47,7 @@ html {
   text-shadow: none;
 }
 
+
 /*
  * A better looking default horizontal rule
  */
@@ -54,6 +60,7 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -70,6 +77,7 @@ video {
   vertical-align: middle;
 }
 
+
 /*
  * Remove default fieldset styles.
  */
@@ -80,6 +88,7 @@ fieldset {
   padding: 0;
 }
 
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -87,6 +96,7 @@ fieldset {
 textarea {
   resize: vertical;
 }
+
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -98,6 +108,7 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
+
 .more,
 h2,
 a {
@@ -109,26 +120,33 @@ h2 {
   font-size: 3em;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 body {
   padding: 25px;
   background-color: rgb(236, 254, 255);
 }
+
 h1,
 p {
   font-family: Cheboygan;
 }
+
 .wrapper {
   padding: 0% 10%;
 }
+
 .about-wrapper {
   margin: 50px 0;
 }
+
 .about-link {
   margin-right: 7px;
 }
+
 .logo {
   margin-left: 5%;
   border-bottom: 1px solid black;
@@ -139,84 +157,97 @@ p {
 header {
   margin-bottom: 50px;
 }
-header > h1.logo > a {
+
+header>h1.logo>a {
   color: black;
 }
-header > h1.logo > a:hover {
-  color: black;
-  text-decoration: none;
-}
-header > h1.logo > a:visited {
-  color: black;
-  text-decoration: none;
-}
-header > h1.logo > a:active {
+
+header>h1.logo>a:hover {
   color: black;
   text-decoration: none;
 }
 
-a {
-
+header>h1.logo>a:visited {
+  color: black;
+  text-decoration: none;
 }
+
+header>h1.logo>a:active {
+  color: black;
+  text-decoration: none;
+}
+
+a {}
 
 .more {
- cursor: pointer;
+  cursor: pointer;
 }
+
 .more:hover {
-color: rgb(52, 244, 21)
+  color: rgb(52, 244, 21)
 }
 
 a:hover {
   color: rgb(52, 244, 21)
 }
 
-.about-page > header {
+.about-page>header {
   margin-bottom: 0px;
 }
+
 .about-email {
   margin-left: 5%;
   margin-bottom: 25px;
 }
-.about-wrapper > section {
+
+.about-wrapper>section {
   padding-left: 0px;
 }
-.about-wrapper > section > a {
+
+.about-wrapper>section>a {
   font-size: 1.2em;
 }
+
 .dingbats {
   margin-bottom: 50px;
 }
+
 .gray {
   color: gray;
 }
-.about-email > section {
+
+.about-email>section {
   padding-left: 0px;
 }
-.about-email > section > p {
+
+.about-email>section>p {
   margin-bottom: 0rem;
   font-size: 1.2em;
   color: rgb(221, 98, 28);
 }
+
 .black-q {
   color: black;
 }
 
 .play-img {
-margin-left: 5px;
-margin-right: 15px;
-position: relative;
-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 15px;
+  position: relative;
+  bottom: 5px;
 }
+
 p.episode-info {
   font-family: monospace;
   font-size: 1.2em;
   display: inline;
 }
+
 .episode {
   margin-bottom: 35px;
 }
 
-.intro-text > p {
+.intro-text>p {
   font-size: 1.2em;
   margin-bottom: 0.2rem;
 }
@@ -230,6 +261,7 @@ p.episode-info {
   display: inline-block;
   margin-bottom: 25px;
 }
+
 .episode-title {
   font-size: 1.3em;
   letter-spacing: 5px;
@@ -252,16 +284,19 @@ p.episode-info {
   margin-left: 4px;
   padding-bottom: 5px;
 }
-.about-section > p {
+
+.about-section>p {
   font-size: 1.2em;
   letter-spacing: 1.5px;
-  font-family:courier:;
+  font-family: courier:;
   margin-bottom: 35px;
 }
+
 .about-img {
   max-height: 550px;
   margin-bottom: 10px;
 }
+
 .three-messages {
   position: relative;
   bottom: 20px;
@@ -281,11 +316,11 @@ p.episode-info {
     font-size: 2.8em;
   }
 
-  .intro-text > p {
+  .intro-text>p {
     font-size: 0.65em;
     margin-bottom: 0.2rem;
   }
-  .about-wrapper > section > a {
+  .about-wrapper>section>a {
     font-size: 0.65em;
   }
   .head-img {
@@ -315,7 +350,7 @@ p.episode-info {
   p.episode-info {
     font-size: 1em;
   }
-  .about-section > p {
+  .about-section>p {
     font-size: 1em;
     /*letter-spacing: 1px;*/
     font-family: sans-serif;
@@ -328,9 +363,11 @@ p.episode-info {
   /* Style adjustments for viewports that meet the condition */
 }
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers
@@ -339,6 +376,7 @@ p.episode-info {
 .hidden {
   display: none !important;
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -356,6 +394,7 @@ p.episode-info {
   width: 1px;
 }
 
+
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
@@ -372,6 +411,7 @@ p.episode-info {
   width: auto;
 }
 
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -379,6 +419,7 @@ p.episode-info {
 .invisible {
   visibility: hidden;
 }
+
 
 /*
  * Clearfix: contain floats
@@ -394,13 +435,16 @@ p.episode-info {
 
 .clearfix:before,
 .clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
   clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -412,9 +456,13 @@ p.episode-info {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
+
 
 /* ==========================================================================
    Print styles.
@@ -429,7 +477,8 @@ p.episode-info {
   *:first-letter,
   *:first-line {
     background: transparent !important;
-    color: #000 !important; /* Black prints faster:
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -452,7 +501,6 @@ p.episode-info {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -468,7 +516,6 @@ p.episode-info {
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
   thead {
     display: table-header-group;
   }
@@ -493,4 +540,29 @@ p.episode-info {
   h3 {
     page-break-after: avoid;
   }
+}
+
+.slider {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: rgb(221, 98, 28);
+}
+
+.range {
+  width: 0;
+  background: rgb(52, 244, 21);
+  height: 44px;
+}
+
+.controls {
+  position: fixed;
+  bottom: 35px;
+  left: 0px;
+}
+.controls > i {
+  font-size: 50px;
 }
