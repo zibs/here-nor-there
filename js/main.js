@@ -65,15 +65,21 @@ $(document).ready(function() {
 var IS_PLAYING = false
 var CURRENT_ID;
 
+function pause() {
+  var oldPlayer = document.getElementById(CURRENT_ID)
+    oldPlayer.pause()
+    $(".slider").slideToggle();
+    $(".controls").fadeToggle();
+    IS_PLAYING = false
+}
+
 function playOrPause(id) {
   if (!CURRENT_ID) {
     CURRENT_ID = id;
   }
 
   if (CURRENT_ID !== id && IS_PLAYING) {
-    var oldPlayer = document.getElementById(CURRENT_ID)
-    oldPlayer.pause()
-    IS_PLAYING = false
+    pause()
   }
 
   CURRENT_ID = id;
@@ -81,9 +87,13 @@ function playOrPause(id) {
   var player = document.getElementById(id)
   if (IS_PLAYING) {
     player.pause()
+    $(".slider").slideToggle();
+    $(".controls").fadeToggle();
     IS_PLAYING = false
   } else {
     player.play()
+    $(".slider").slideToggle();
+    $(".controls").fadeToggle();
     attachListenerAndAnimateControls(id)
     IS_PLAYING = true
   }
