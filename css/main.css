@@ -127,7 +127,7 @@ h2 {
 
 body {
   padding: 25px;
-  background-color: rgb(236, 254, 255);
+  /* background-color: rgb(236, 254, 255); */
 }
 
 h1,
@@ -148,10 +148,16 @@ p {
 }
 
 .logo {
-  margin-left: 5%;
+  /* margin-left: 5%; */
   border-bottom: 1px solid black;
   display: inline-block;
   font-size: 4em;
+  text-shadow: 2px 2px rgb(221, 98, 28);
+  
+
+
+
+
 }
 
 header {
@@ -191,13 +197,14 @@ a:hover {
   color: rgb(52, 244, 21)
 }
 
-.about-page>header {
+.about-email>header {
   margin-bottom: 0px;
 }
 
 .about-email {
-  margin-left: 5%;
-  margin-bottom: 25px;
+  /* margin-left: 1%; */
+  margin-left: 1px;
+  margin-bottom: 50px;
 }
 
 .about-wrapper>section {
@@ -209,7 +216,7 @@ a:hover {
 }
 
 .dingbats {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .gray {
@@ -248,18 +255,21 @@ p.episode-info {
 }
 
 .intro-text>p {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
   margin-bottom: 0.2rem;
 }
 
 .head-img {
   position: relative;
+  max-width: 200%;
   bottom: 50px;
 }
 
 .episodes {
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  font-size: 3.1em;
 }
 
 .episode-title {
@@ -303,6 +313,32 @@ p.episode-info {
   margin-left: 5px;
   /*padding-bottom: 10px;*/
   /*max-height: 20px;*/
+}
+
+  @media only screen and (max-width: 960px) {
+
+  .intro-text>p {
+    font-size: 1.2em;
+    margin-bottom: 0.2rem;
+  }
+
+}
+  @media only screen and (max-width: 770px) {
+  .logo {
+    font-size: 2.7em;
+  }
+  .intro-text>p {
+    font-size: 0.9em;
+    margin-bottom: 0.2rem;
+  }
+  .head-img {
+    max-width: 150%;
+  }
+  .about-wrapper>section>a {
+    font-size: 0.9em;
+  }
+
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -359,6 +395,73 @@ p.episode-info {
   .about-img {
     max-height: 550px;
     margin-bottom: 10px;
+  }
+
+  .three-messages { 
+    bottom: 5px;
+  }
+  /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (max-width: 325px) {
+  .wrapper {
+    padding: 0 0%;
+  }
+
+  .logo {
+    
+    font-size: 2.3em;
+  }
+
+  .intro-text>p {
+    font-size: 0.5em;
+    margin-bottom: 0.2rem;
+  }
+  .head-img {
+    max-width: 120%;
+  }
+  .about-wrapper>section>a {
+    font-size: 0.65em;
+  }
+  .head-img {
+    position: relative;
+    bottom: 20px;
+    max-height: 150px;
+  }
+  .intro-image {
+    padding: 0px;
+  }
+  .three-messages {
+    max-height: 20px;
+  }
+
+  .hand-img {
+    max-height: 15px;
+    margin-left: 1px;
+    padding-bottom: 0px;
+  }
+  .episodes {
+    font-size: 2.5em;
+  }
+  .episode-title {
+    font-size: 1em;
+    letter-spacing: 3px;
+  }
+  p.episode-info {
+    font-size: 1em;
+  }
+  .about-section>p {
+    font-size: 1em;
+    /*letter-spacing: 1px;*/
+    font-family: sans-serif;
+    margin-bottom: 35px;
+  }
+  .about-img {
+    max-height: 550px;
+    margin-bottom: 10px;
+  }
+
+  .three-messages { 
+    bottom: 5px;
   }
   /* Style adjustments for viewports that meet the condition */
 }
@@ -549,22 +652,22 @@ p.episode-info {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 44px;
+  height: 64px;
   background: rgb(221, 98, 28);
 }
 
 .range {
   width: 0;
   background: rgb(52, 244, 21);
-  height: 44px;
+  height: 64px;
 }
 
 .controls {
   display: none;
   position: fixed;
-  bottom: 35px;
+  bottom: 60px;
   left: 0px;
 }
 .controls > i {
-  font-size: 50px;
+  font-size: 30px;
 }
