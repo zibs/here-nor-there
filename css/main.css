@@ -298,7 +298,7 @@ p.episode-info {
 .about-section>p {
   font-size: 1.2em;
   letter-spacing: 1.5px;
-  font-family: courier:;
+  font-family: Cheboygan;
   margin-bottom: 35px;
 }
 
@@ -332,7 +332,7 @@ p.episode-info {
     margin-bottom: 0.2rem;
   }
   .head-img {
-    max-width: 150%;
+    max-width: 160%;
   }
   .about-wrapper>section>a {
     font-size: 0.9em;
@@ -389,7 +389,8 @@ p.episode-info {
   .about-section>p {
     font-size: 1em;
     /*letter-spacing: 1px;*/
-    font-family: sans-serif;
+    font-family: Cheboygan;
+
     margin-bottom: 35px;
   }
   .about-img {
@@ -452,7 +453,7 @@ p.episode-info {
   .about-section>p {
     font-size: 1em;
     /*letter-spacing: 1px;*/
-    font-family: sans-serif;
+    font-family: Cheboygan;
     margin-bottom: 35px;
   }
   .about-img {
