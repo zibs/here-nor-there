@@ -89,5 +89,6 @@ function stop() {
   CONTROLS_VISIBLE = false;
   WAVEFORM_VISIBLE = false;
   IS_PLAYING = false;
+  CURRENT_EPISODE= '';
   wavesurfer.stop();
 }
