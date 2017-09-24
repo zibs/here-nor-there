@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +40,7 @@
         <p>Squamish, Sto:lo and Tsleil-Waututh territories</p>
       </section>
       <section class="intro-image col-md-2 col-sm-3 col-3">
-        <img src="img/main.jpg" class="float-right img-fluid head-img" alt="head">
+        <img src="img/main.png" class="float-right img-fluid head-img" alt="head">
         </section>
     </div>
     <div class="row about-wrapper">
@@ -63,31 +65,43 @@
       </section>
     </div>
     <div class="row">
-      <audio id="episode1" src="media/ashbery.mp3"></audio>
-      <audio id="episode2" src="media/ashbery.mp3"></audio>
-      <audio id="episode3" src="media/ashbery.mp3"></audio>
       <section class="col-sm-10 col-12 mx-auto episode">
-        <img onclick="playOrPause('episode1')" src="img/play.png" class="img-fluid play-img" alt="play" />
+        <i onclick="playOrPause('episode3')" id="ep3" class="material-icons play-img">play_arrow</i>
         <p class="episode-info"><span class="episode-title">1. What if the Music is Bad?</span> Tom Whalen is a local artist and musician who currently performs as Tommy Tone and runs a tape lavel with Rob Ondzik called Smooth Effects. We sit down to discuss various topics around the popularization of EDM, the notion of performance within electronic music and the politics informing the DIY sensibilities and communities in Vancouver and Koenji, Japan, where he spent his past year organizing shows. </p>
-        <p class="episode-info more-1 hidden">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <section class="more-1 hidden">
+          <h4>Slow Wave Series:</h4>
+          <p class="episode-info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h4>
+            <em>Tom’s Music —</em>
+          </h4>
+          <p class="episode-info bio"><a href="https://soundcloud.com/new-vaders" target="_blank">Soundcloud</a> - <a href="https://trashtronix.bandcamp.com/" target="_blank">Bandcamp</a></p>
+        </section>
         <span id="more-1" class="more">MORE</span>
       </section>
     </div>
     <div class="row">
       <section class="col-sm-10 col-12 mx-auto episode">
-        <img onclick="playOrPause('episode2')" src="img/play.png" id="ep2" class="img-fluid play-img" alt="play" />
-        <p class="episode-info"><span class="episode-title">2. Landscape of the Less Familiar</span> Yu Su is a producer, collector and DJ based in Vancouver but originally from Kaifeng, China. Her music moves freely between the reflection of her cultural heritage and the landscape of the less familiar Pacific Northwest. Her collaborative project You're Me (with Scott Gailey) further exmaines this approach and is critically acclaimed as a successful combination of musical composition and environmental studies. We catch up on her influences, classical piano training, learning curves, musings on the genre of ambient music and the routine of XXXXX (Yan Bao Jian Cao) </p>
-        <p class="episode-info more-2 hidden">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <i onclick="playOrPause('episode3')" id="ep3" class="material-icons play-img">play_arrow</i>
+        <p class="episode-info"><span class="episode-title">2. Landscape of the Less Familiar</span> Yu Su is a producer, collector and DJ based in Vancouver but originally from Kaifeng, China. Her music moves freely between the reflection of her cultural heritage and the landscape of the less familiar Pacific Northwest. Her collaborative project You're Me (with Scott Gailey) further exmaines this approach and is critically acclaimed as a successful combination of musical composition and environmental studies. We catch up on her influences, classical piano training, learning curves, musings on the genre of ambient music and the routine of  眼保健操 (Yan Bao Jian Cao). 眼保健操 is a set of daily exercise routines that Yu Su practiced while growing up in Kaifeng. </p>
+        <section class="more-2 hidden">
+          <h4>Slow Wave Series:</h4>
+          <p class="episode-info ">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h4>
+            <em>Yu Su's Music —</em>
+          </h4>
+          <p class="episode-info bio"><a href="https://soundcloud.com/yu_su" target="_blank">Soundcloud</a> - <a href="https://genero.bandcamp.com/album/ai-ye-2"
+              target="_blank">Bandcamp</a></p>
+        </section>   
         <span id="more-2" class="more">MORE</span>
       </section>
     </div>
     <div class="row">
       <section class="col-sm-10 col-12 mx-auto episode">
-        <img onclick="playOrPause('episode3')" src="img/play.png" id="ep3" class="img-fluid play-img" alt="play" />
+        <i onclick="playOrPause('episode3')" id="ep3" class="material-icons play-img">play_arrow</i>
         <p class="episode-info"><span class="episode-title">3. On Sounds at Sunset and More</span> This episode is a conversation with artist, musician and organizer Soledad Muñoz. It is also an introduction to three of her studio mates, collaboratoes, friends and other local producers Benita Prado, Nissrine Sekkat and Samira Warsame. Recorded in various locations around Mount Pleasant and in their Chinatown studio, we discuss the energy of WOC bonding and their collective projects that strive to provide visibility, resources, inclusiveness and safety for a more inclusive and diverse club scene.</p>
         <p class="episode-info more-3 hidden">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -97,13 +111,11 @@
     </div>
   </main>
 
-  <div class="slider">
-    <div class="range"></div>
-  </div>
+  <div id="waveform"></div>
   <section class="controls">
-    <i onclick="stop()" class="material-icons">stop</i>
-    <i onclick="pause()" class="material-icons">pause</i>
     <i onclick="play()" class="material-icons">play_arrow</i>
+    <i onclick="pause()" class="material-icons">pause</i>
+    <i onclick="stop()" class="material-icons">stop</i>
   </section>
   
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

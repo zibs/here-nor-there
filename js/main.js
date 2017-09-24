@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $("#more-1").click(function() {
+$(document).ready(function () {
+  $("#more-1").click(function () {
     $(".more-1").toggleClass("hidden");
     // if ($('.more-1').hasClass('hidden')) {
     //   $('.more-1').fadeIn().removeClass("hidden")
@@ -12,7 +12,7 @@ $(document).ready(function() {
       $("#more-1").text("LESS");
     }
   });
-  $("#more-2").click(function() {
+  $("#more-2").click(function () {
     $(".more-2").toggleClass("hidden");
     if ($(".more-2").hasClass("hidden")) {
       $("#more-2").text("MORE");
@@ -20,7 +20,7 @@ $(document).ready(function() {
       $("#more-2").text("LESS");
     }
   });
-  $("#more-3").click(function() {
+  $("#more-3").click(function () {
     $(".more-3").toggleClass("hidden");
     if ($(".more-3").hasClass("hidden")) {
       $("#more-3").text("MORE");
@@ -30,107 +30,54 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  // var player = document.getElementById('player')
-  // document.getElementById('player').play()
-});
-$(document).ready(function() {
-  var isPlaying = false;
-  $("#ep1").click(function() {
-    var player = document.getElementById("epi1");
-    if (isPlaying) {
-      document.getElementById("epi1").pause();
-      isPlaying = false;
-    } else {
-      document.getElementById("epi1").play();
-      isPlaying = true;
-    }
-    player.addEventListener("timeupdate", function() {
-      var currentTime = player.currentTime;
-      var duration = player.duration;
-      $(".range")
-        .stop(true, true)
-        .animate(
-          { width: (currentTime + 0.25) / duration * 100 + "%" },
-          250,
-          "linear"
-        );
-    });
-  });
-  // var player = document.getElementById('player');
-  // document.getElementById('player').play();
-  // player.addEventListener("timeupdate", function() {
-  //     var currentTime = player.currentTime;
-  //     var duration = player.duration;
-  //     $('.hp_range').stop(true,true).animate({'width':(currentTime +.25)/duration*100+'%'},250,'linear');
-  // });
+
+var wavesurfer = WaveSurfer.create({
+  container: "#waveform",
+  waveColor: "#dd621c",
+  progressColor: "#4CDD28",
+  height: 88,
+
 });
 
 var IS_PLAYING = false;
-var CURRENT_ID;
+var CURRENT_EPISODE;
+var CONTROLS_VISIBLE = false;
+var WAVEFORM_VISIBLE = true;
 
-function pause() {
-  if (IS_PLAYING) {
-    var currentPlayer = document.getElementById(CURRENT_ID);
-    currentPlayer.pause();
-    IS_PLAYING = false;
+function playOrPause(episodeName) {
+  if (CURRENT_EPISODE !== episodeName) {
+    wavesurfer.stop();
+    CURRENT_EPISODE = episodeName;
+    wavesurfer.load("../media/" + episodeName + ".mp3");
+    wavesurfer.on("ready", function () {
+      wavesurfer.play();
+      if (!CONTROLS_VISIBLE) {
+        $(".controls").fadeToggle();
+        CONTROLS_VISIBLE = true;
+      }
+      if (!WAVEFORM_VISIBLE) {
+        $("#waveform").fadeTo('500', 1);
+        WAVEFORM_VISIBLE = true
+      }
+
+    });
+  } else {
+    wavesurfer.pause();
   }
-}
-
-function stop() {
-  var currentPlayer = document.getElementById(CURRENT_ID);
-  currentPlayer.pause();
-  currentPlayer.currentTime = 0;
-  $(".slider").slideToggle();
-  $(".controls").fadeToggle();
-  IS_PLAYING = false;
 }
 
 function play() {
-  if (!IS_PLAYING) {
-    var currentPlayer = document.getElementById(CURRENT_ID);
-    currentPlayer.play();
-    IS_PLAYING = true;
-  }
+  wavesurfer.play();
 }
 
-function playOrPause(id) {
-  if (!CURRENT_ID) {
-    CURRENT_ID = id;
-  }
-
-  if (CURRENT_ID !== id && IS_PLAYING) {
-    pause();
-  }
-
-  CURRENT_ID = id;
-
-  var player = document.getElementById(id);
-  if (IS_PLAYING) {
-    player.pause();
-    $(".slider").slideToggle();
-    $(".controls").fadeToggle();
-    IS_PLAYING = false;
-  } else {
-    player.play();
-    $(".slider").slideToggle();
-    $(".controls").fadeToggle();
-    attachListenerAndAnimateControls(id);
-    IS_PLAYING = true;
-  }
+function pause() {
+  wavesurfer.pause();
 }
 
-function attachListenerAndAnimateControls(id) {
-  var player = document.getElementById(id);
-  player.addEventListener("timeupdate", function() {
-    var currentTime = player.currentTime;
-    var duration = player.duration;
-    $(".range")
-      .stop(true, true)
-      .animate(
-        { width: (currentTime + 0.25) / duration * 100 + "%" },
-        250,
-        "linear"
-      );
-  });
+function stop() {
+  $(".controls").fadeToggle();
+  $("#waveform").fadeTo('500', 0);
+  CONTROLS_VISIBLE = false;
+  WAVEFORM_VISIBLE = false;
+  wavesurfer.stop();
 }
