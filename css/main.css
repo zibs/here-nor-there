@@ -769,3 +769,11 @@ span.episode-title:hover {
     -webkit-transform: scale(1.0);
   }
 }
+
+.more-1 > img, .more-3 > img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+ max-height: 500px;
+}
+
+
