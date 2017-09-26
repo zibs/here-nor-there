@@ -44,13 +44,12 @@ var WAVEFORM_VISIBLE = true;
 
 function playOrPause(episodeName) {
   if (CURRENT_EPISODE !== episodeName) {
+    $(".spinner").fadeTo('500', 1);
     wavesurfer.stop();
     CURRENT_EPISODE = episodeName;
-    console.log('====================================');
-    console.log('PLAYING');
-    console.log('====================================');
     wavesurfer.load("../media/" + episodeName + ".mp3");
     wavesurfer.on("ready", function() {
+      $(".spinner").fadeTo("500", 0);
       wavesurfer.play();
       IS_PLAYING = true;
       if (!CONTROLS_VISIBLE) {
