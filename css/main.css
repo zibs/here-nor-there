@@ -770,7 +770,10 @@ span.episode-title:hover {
   }
 }
 
-.more-1 > img, .more-3 > img {
+  .more-1>img,
+.more-3>img,
+.more-2 > img {
+
   margin-top: 25px;
   margin-bottom: 25px;
  max-height: 500px;
