@@ -318,6 +318,10 @@ span.episode-title:hover {
   text-decoration: underline;
 }
 
+.links > a {
+  display: block;
+}
+
 
 .hand-img {
   max-height: 30px;
@@ -348,7 +352,7 @@ span.episode-title:hover {
   @media only screen and (max-width: 960px) {
 
   .intro-text>p {
-    font-size: 1.2em;
+    font-size: 0.9em;
     margin-bottom: 0.2rem;
   }
 
