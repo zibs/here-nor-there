@@ -327,6 +327,11 @@ span.episode-title:hover {
   bottom: 100px;
 }
 
+.subscribe-link {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
 
 .hand-img {
   max-height: 30px;
