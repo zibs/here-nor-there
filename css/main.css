@@ -322,6 +322,11 @@ span.episode-title:hover {
   display: block;
 }
 
+.links {
+  position: fixed;
+  bottom: 100px;
+}
+
 
 .hand-img {
   max-height: 30px;
