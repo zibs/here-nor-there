@@ -328,6 +328,10 @@ span.episode-title:hover {
   text-decoration: underline;
 }
 
+span.episode-title:hover > i {
+  text-decoration: underline;
+}
+
 .links>a {
   display: block;
 }
