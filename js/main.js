@@ -30,6 +30,7 @@ $(document).ready(function() {
   });
 });
 
+
 var wavesurfer = WaveSurfer.create({
   container: "#waveform",
   waveColor: "#dd621c",
@@ -43,7 +44,16 @@ var CONTROLS_VISIBLE = false;
 var WAVEFORM_VISIBLE = true;
 
 function playOrPause(episodeName) {
+  
   if (CURRENT_EPISODE !== episodeName) {
+
+    if (CONTROLS_VISIBLE && WAVEFORM_VISIBLE) {
+    $(".controls").fadeToggle();
+    $("#waveform").fadeTo("250", 0);
+    CONTROLS_VISIBLE = false;
+    WAVEFORM_VISIBLE = false;
+    }
+
     $(".spinner").fadeTo('500', 1);
     wavesurfer.stop();
     CURRENT_EPISODE = episodeName;
