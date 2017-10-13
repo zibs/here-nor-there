@@ -33,7 +33,14 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.8/wavesurfer.min.js"></script>
+  <script src="js/plugins.js"></script>
 </head>
 
 <body>
@@ -179,12 +186,6 @@
     <i onclick="pause()" class="material-icons">pause</i>
     <i onclick="stop()" class="material-icons">stop</i>
   </section>
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script>
-  window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
-
-  </script>
-  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 </body>
 
